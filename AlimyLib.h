@@ -1,3 +1,11 @@
+/*
+  AlimyLib.h - Library for Alimy(Tableclock for 'hhmmss(TimeDiary)').
+  Created by Jho. November 09, 2018.
+
+  https://github.com/TimeDiary/Alimy.git
+*/
+
+
 #ifndef ALIMY_LIB_H
 #define ALIMY_LIB_H
 
@@ -16,6 +24,12 @@ class Alimy
     Alimy();
 
     /*
+     * Init 1602LCD_I2C
+     */
+     int initLcd();
+
+
+    /*
        Print String str to lcd's (0, 0)
     */
     int print2lcd(String);
@@ -28,7 +42,7 @@ class Alimy
     /*
        Clear lcd
     */
-    void clearLcd();
+    int clearLcd();
 
 
 
